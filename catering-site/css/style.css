@@ -631,7 +631,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; position: relative; }
 
 /* ---------- Pricing / Packages ---------- */
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; align-items: stretch; }
-.price-card { padding: 40px 32px; text-align: center; position: relative; display: flex; flex-direction: column; }
+.price-card { padding: 40px 32px; text-align: center; position: relative; display: flex; flex-direction: column; overflow: visible; }
 .price-card.popular { border: 2px solid var(--clr-accent); transform: scale(1.04); box-shadow: var(--shadow-lg); }
 .price-card.popular::before { content: 'Most Popular'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--clr-accent); color: #2B1D18; padding: 6px 18px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; box-shadow: var(--shadow-gold); }
 .price-card .guests { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 6px; }
