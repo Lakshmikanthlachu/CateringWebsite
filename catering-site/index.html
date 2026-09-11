@@ -10,7 +10,7 @@
 <meta property="og:description" content="Bespoke menus, live culinary counters and flawless service for weddings, corporate events and celebrations.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%237C2434'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
@@ -47,30 +47,21 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="kicker">Weddings &amp; Events Catering</div>
-      <h1>Unforgettable food, <em>beautifully</em> served</h1>
-      <p>From intimate engagements to 800-guest wedding receptions, Bellavita designs bespoke menus and live culinary experiences that turn every celebration into a feast to remember.</p>
+      <p class="hero-kicker">Bespoke Catering &middot; Est. 2008</p>
+      <h1>Food that turns gatherings into <em>occasions</em></h1>
+      <p>Bellavita crafts chef-led menus and full-service catering for weddings, corporate events and private celebrations — from the first tasting to the very last course.</p>
       <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-        <a href="menu.html" class="btn btn-outline">Explore Our Menus</a>
+        <a href="contact.html" class="btn btn-primary">Plan Your Event</a>
+        <a href="menu.html" class="btn btn-ghost">See Our Menus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><b>1,200+</b><span>Events Catered</span></div>
-        <div class="stat"><b>18</b><span>Years of Excellence</span></div>
-        <div class="stat"><b>60+</b><span>Signature Menus</span></div>
-        <div class="stat"><b>4.9★</b><span>Average Rating</span></div>
+      <div class="hero-stat-strip">
+        <div class="hs-stat"><b>18+</b><span>Years of Service</span></div>
+        <div class="hs-stat"><b>1,200+</b><span>Events Catered</span></div>
+        <div class="hs-stat"><b>4.9/5</b><span>Client Rating</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="stage">
-        <div class="hero-card tilt hc-1" data-tilt-max="6"><div class="media-photo"><img src="https://images.unsplash.com/photo-1677768062274-fdd45caac233?w=800&q=80&auto=format&fit=crop" alt="Elegant banquet hall set up for a wedding reception with chandeliers" loading="eager"></div></div>
-        <div class="hero-card tilt hc-2" data-tilt-max="6"><div class="media-photo"><img src="https://images.unsplash.com/photo-1666811089871-a856fff33d62?w=500&q=80&auto=format&fit=crop" alt="Wedding cake with champagne glasses" loading="eager"></div></div>
-        <div class="hero-card tilt hc-3" data-tilt-max="6"><div class="media-photo"><img src="https://images.unsplash.com/photo-1767974968707-db3d448d4ef3?w=400&q=80&auto=format&fit=crop" alt="Grilled meat skewers on a serving platter" loading="eager"></div></div>
-        <div class="floating-badge">
-          <div class="fb-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div>
-          <div><b>Fully Booked Season</b><span>2026 wedding dates filling fast</span></div>
-        </div>
-      </div>
+    <div class="hero-mascot">
+      <canvas id="mascotCanvas" width="1440" height="1440"></canvas>
     </div>
   </div>
   <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
@@ -324,6 +315,7 @@
 </footer>
 
 <button class="back-to-top" aria-label="Back to top">↑</button>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
+<script src="assets/mascot/mascot.js?v=3" defer></script>
 </body>
 </html>

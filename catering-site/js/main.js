@@ -183,17 +183,6 @@
     });
   }
 
-  /* ---------------- Hero visual gentle parallax on mousemove ---------------- */
-  var stage = document.querySelector('.hero-visual .stage');
-  if (stage && supportsHover) {
-    document.querySelector('.hero') && document.querySelector('.hero').addEventListener('mousemove', function (e) {
-      var w = window.innerWidth, h = window.innerHeight;
-      var rx = ((e.clientY / h) - 0.5) * -10;
-      var ry = ((e.clientX / w) - 0.5) * 14;
-      stage.style.transform = 'rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
-    });
-  }
-
   /* ---------------- Tabs (menu.html) ---------------- */
   var tabBtns = document.querySelectorAll('.tab-btn');
   if (tabBtns.length) {
