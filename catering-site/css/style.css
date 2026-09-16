@@ -177,16 +177,27 @@ section { padding: clamp(60px, 9vw, 120px) 0; position: relative; }
 .btn-sm { padding: 10px 20px; font-size: 0.85rem; }
 
 .btn-ghost {
-  background: transparent;
-  border: none;
+  /* Frosted pill (not plain text) so it reads as a real button and keeps
+     reliable contrast no matter what it's sitting on — including the
+     hero's gradient, which runs from light blush pink to dark maroon. */
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--text) 16%, transparent);
   color: var(--text);
-  padding-left: 6px;
-  padding-right: 6px;
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: 0 10px 24px -16px rgba(var(--shadow-color), 0.4);
 }
 .btn-ghost .icon { transition: transform 0.25s var(--ease); }
-.btn-ghost:hover { color: var(--clr-primary); }
+.btn-ghost:hover {
+  color: var(--clr-primary);
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
+  border-color: color-mix(in srgb, var(--clr-primary) 45%, transparent);
+}
 .btn-ghost:hover .icon { transform: translateX(4px); }
-[data-theme="dark"] .btn-ghost:hover { color: var(--clr-accent-light); }
+[data-theme="dark"] .btn-ghost:hover {
+  color: var(--clr-accent-light);
+  border-color: color-mix(in srgb, var(--clr-accent) 45%, transparent);
+}
 
 /* ---------- Header / Nav ---------- */
 .site-header {
@@ -1001,7 +1012,10 @@ section { padding: clamp(60px, 9vw, 120px) 0; position: relative; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .gallery-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: minmax(0, 1fr); }
-  .hero-mascot { max-width: 260px; }
+  .hero { padding-bottom: 48px; }
+  .hero-mascot { max-width: 220px; margin-bottom: 4px; }
+  .hero-copy > p { margin-bottom: 22px; }
+  .hero-cta { margin-bottom: 26px; }
   .hero-stat-strip { gap: 18px 24px; }
   .hero-stats { gap: 22px; }
   .cta-band h2 { font-size: 1.7rem; }
