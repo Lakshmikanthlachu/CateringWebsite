@@ -359,11 +359,13 @@ section { padding: clamp(60px, 9vw, 120px) 0; position: relative; }
 .hero-stats .stat span { font-size: 0.85rem; color: var(--text-soft); }
 
 .hero-stat-strip { display: flex; gap: 28px 36px; flex-wrap: wrap; }
-.hs-stat { padding-inline-start: 20px; border-inline-start: 1px solid var(--border); }
+.hs-stat { padding-inline-start: 20px; border-inline-start: 1px solid rgba(255, 255, 255, 0.28); }
 .hs-stat:first-child { padding-inline-start: 0; border-inline-start: none; }
-.hs-stat b { display: block; font-family: var(--ff-heading); font-size: 1.7rem; color: var(--clr-primary); }
-[data-theme="dark"] .hs-stat b { color: var(--clr-accent-light); }
-.hs-stat span { font-size: 0.82rem; color: var(--text-soft); }
+/* These stats always sit over the hero's darker lower gradient (in both
+   themes), so they use fixed light tones rather than the theme's default
+   text colors, which are tuned for a light page background. */
+.hs-stat b { display: block; font-family: var(--ff-heading); font-size: 1.7rem; color: var(--clr-accent-light); }
+.hs-stat span { font-size: 0.82rem; color: rgba(255, 244, 230, 0.8); }
 
 /* Hero — felted chef mascot: a static ultra-HD portrait with only the eyes
    drawn dynamically on top, tracking the cursor (no blinking, no frames) */
@@ -403,8 +405,11 @@ section { padding: clamp(60px, 9vw, 120px) 0; position: relative; }
 .card:hover .media-photo img, .gallery-item:hover .media-photo img { transform: scale(1.1); }
 .card:hover .media-photo::after, .gallery-item:hover .media-photo::after { opacity: 1; }
 
-.scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); }
-.scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(var(--clr-accent), transparent); animation: scrolldown 1.8s ease-in-out infinite; }
+/* Both heroes that use this (index.html's gradient, home-2.html's dark photo
+   overlay) are dark where this cue sits, so it uses a fixed light tone
+   rather than the theme's default muted text color. */
+.scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 244, 230, 0.85); }
+.scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(var(--clr-accent-light), transparent); animation: scrolldown 1.8s ease-in-out infinite; }
 @keyframes scrolldown { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 
 /* ---------- Cards (tilt-enabled) ---------- */
